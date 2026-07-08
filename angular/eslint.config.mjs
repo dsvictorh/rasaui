@@ -1,12 +1,13 @@
 // @ts-check
-const eslint = require('@eslint/js');
-const tseslint = require('typescript-eslint');
-const angular = require('angular-eslint');
-const eslintConfigPrettier = require('eslint-config-prettier');
-const simpleImportSort = require('eslint-plugin-simple-import-sort');
-const perfectionist = require('eslint-plugin-perfectionist');
+import { defineConfig } from 'eslint/config';
+import eslint from '@eslint/js';
+import tseslint from 'typescript-eslint';
+import angular from 'angular-eslint';
+import eslintConfigPrettier from 'eslint-config-prettier';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import perfectionist from 'eslint-plugin-perfectionist';
 
-module.exports = tseslint.config(
+export default defineConfig(
    {
       ignores: ['.angular/**', '.nx/**', 'coverage/**', 'dist/**'],
       files: ['**/*.ts'],
@@ -17,6 +18,12 @@ module.exports = tseslint.config(
          ...angular.configs.tsRecommended,
          eslintConfigPrettier
       ],
+      languageOptions: {
+         parserOptions: {
+            projectService: true,
+            tsconfigRootDir: import.meta.dirname
+         }
+      },
       plugins: {
          'simple-import-sort': simpleImportSort,
          perfectionist
@@ -34,7 +41,7 @@ module.exports = tseslint.config(
             'error',
             {
                type: 'element',
-               prefix: 'meracq',
+               prefix: 'rasa',
                style: 'kebab-case'
             }
          ],
@@ -69,7 +76,7 @@ module.exports = tseslint.config(
             }
          ],
          '@typescript-eslint/no-empty-function': 'warn',
-         '@typescript-eslint/no-empty-interface': 'error',
+         '@typescript-eslint/no-empty-object-type': 'error',
          '@typescript-eslint/no-explicit-any': 'warn',
          '@typescript-eslint/no-inferrable-types': 'off',
          '@typescript-eslint/no-shadow': 'warn',
@@ -109,8 +116,8 @@ module.exports = tseslint.config(
             {
                groups: [
                   ['^@angular'], //Angular packages
-                  ['^@(?!angular)(?!meracq)', '^[a-z]'], //External npm packages (scoped or unscoped)
-                  ['^@meracq'], //Project-local aliases
+                  ['^@(?!angular)(?!rasa)', '^[a-z]'], //External npm packages (scoped or unscoped)
+                  ['^@rasa'], //Project-local aliases
                   ['^\\./', '^\\.\\./'], //Relative/physical paths
                   ['^\\u0000'] //"None" imports
                ]

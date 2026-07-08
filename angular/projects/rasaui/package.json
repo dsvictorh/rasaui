@@ -1,0 +1,17 @@
+{
+   "name": "@rasaui/ng",
+   "version": "0.0.1",
+   "scripts": {
+      "gen:component": "cd projects/rasaui/src/lib/components && ng generate component --type component",
+      "gen:pipe": "cd projects/rasaui/src/lib/pipes && ng generate pipe --flat false",
+      "gen:directive": "cd projects/rasaui/src/lib/directives && ng generate directive --type directive --flat false"
+   },
+   "peerDependencies": {
+      "@angular/common": "^22.0.0",
+      "@angular/core": "^22.0.0"
+   },
+   "dependencies": {
+      "tslib": "^2.3.0"
+   },
+   "sideEffects": false
+}
