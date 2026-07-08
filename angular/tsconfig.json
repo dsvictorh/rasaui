@@ -12,7 +12,7 @@
       "experimentalDecorators": true,
       "importHelpers": true,
       "paths": {
-         "rasaui": ["./dist/rasaui", "./dist/rasaui", "./dist/rasaui"]
+         "rasaui": ["./dist/rasaui"]
       },
       "target": "ES2022",
       "module": "preserve"
@@ -24,18 +24,6 @@
    },
    "files": [],
    "references": [
-      {
-         "path": "./projects/rasaui/tsconfig.lib.json"
-      },
-      {
-         "path": "./projects/rasaui/tsconfig.spec.json"
-      },
-      {
-         "path": "./projects/rasaui/tsconfig.lib.json"
-      },
-      {
-         "path": "./projects/rasaui/tsconfig.spec.json"
-      },
       {
          "path": "./projects/rasaui/tsconfig.lib.json"
       },
