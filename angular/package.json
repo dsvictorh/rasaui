@@ -2,11 +2,17 @@
    "name": "rasaui",
    "scripts": {
       "ng": "ng",
+      "start": "run-p lib sandbox",
+      "sandbox": "wait-on dist/rasaui/package.json && ng serve sandbox",
+      "lib": "ng build rasaui --watch",
       "precommit": "npm run format && npm run lint",
       "lint": "eslint --fix",
       "lint:check": "eslint",
       "format": "prettier --write .",
-      "format:check": "prettier --check ."
+      "format:check": "prettier --check .",
+      "rasa:component": "cd projects/rasaui/src/lib/components && ng generate component --type component --style less -v None",
+      "rasa:pipe": "cd projects/rasaui/src/lib/pipes && ng generate pipe --flat false",
+      "rasa:directive": "cd projects/rasaui/src/lib/directives && ng generate directive --type directive --flat false"
    },
    "private": true,
    "packageManager": "npm@11.17.0",
@@ -37,6 +43,7 @@
       "prettier": "^3.9.4",
       "typescript": "~6.0.2",
       "typescript-eslint": "^8.63.0",
-      "vitest": "^4.0.8"
+      "vitest": "^4.0.8",
+      "wait-on": "^9.0.10"
    }
 }

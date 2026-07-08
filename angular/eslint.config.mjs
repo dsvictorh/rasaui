@@ -9,7 +9,7 @@ import perfectionist from 'eslint-plugin-perfectionist';
 
 export default defineConfig(
    {
-      ignores: ['.angular/**', '.nx/**', 'coverage/**', 'dist/**'],
+      ignores: ['.angular/**', '.nx/**', 'coverage/**', 'dist/**', 'projects/sandbox/**'],
       files: ['**/*.ts'],
       extends: [
          eslint.configs.recommended,

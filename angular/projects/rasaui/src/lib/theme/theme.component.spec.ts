@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Rasaui } from './rasaui';
+import { ThemeComponent } from './theme.component';
 
-describe('Rasaui', () => {
-   let component: Rasaui;
-   let fixture: ComponentFixture<Rasaui>;
+describe('ThemeComponent', () => {
+   let component: ThemeComponent;
+   let fixture: ComponentFixture<ThemeComponent>;
 
    beforeEach(async () => {
       await TestBed.configureTestingModule({
-         imports: [Rasaui]
+         imports: [ThemeComponent]
       }).compileComponents();
 
-      fixture = TestBed.createComponent(Rasaui);
+      fixture = TestBed.createComponent(ThemeComponent);
       component = fixture.componentInstance;
       await fixture.whenStable();
    });

@@ -1,0 +1,82 @@
+/* IMPORTANT: ALWAYS USE THESE FUNCTIONS FOR THE FUNCTIONALITIES THEY OFFER INSTEAD OF DIRECT METHODS */
+
+/* Image function that allows to create adaptible images from svg files */
+.svg(@url, @width: null, @height: null, @ratio: 1, @color: var(--color-black), @adaptible: false) {
+   text-align: center;
+   & when (@adaptible = true) {
+      max-width: if(not(@width=null), @width, none);
+      max-height: if(not(@height=null), @height, none);
+      margin: 0 auto;
+   }
+
+   &::after {
+      display: inline-block;
+      content: '';
+      & when (@adaptible = false) {
+         width: if(not(@width=null), @width, @height * @ratio);
+         height: if(not(@height=null), @height, @width * @ratio);
+      }
+
+      & when (@adaptible = true) {
+         width: if(not(@width=null), 100%, @ratio * 100%);
+         padding-bottom: if(not(@height=null), 0, @ratio * 100%);
+      }
+
+      background-color: @color;
+
+      mask-image: url('/img/@{url}.svg');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+
+      -webkit-mask-image: url('/img/@{url}.svg');
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      -webkit-mask-size: contain;
+   }
+}
+
+/* Transition function that ensures the accessibility focus box transition to always be added alongside your own transitions */
+.transition(@extra) {
+   transition:
+      box-shadow 0.05s 0.15s linear,
+      border-radius 0s 0.15s linear,
+      @extra;
+}
+
+/* Responsive breakpoint functions */
+.laptop(@rules) {
+   @media screen and (max-width: 1366px) {
+      @rules();
+   }
+}
+
+.laptop-small(@rules) {
+   @media screen and (max-width: 1200px) {
+      @rules();
+   }
+}
+
+.laptop-height(@rules) {
+   @media screen and (max-height: 768px) {
+      @rules();
+   }
+}
+
+.tablet(@rules) {
+   @media screen and (max-width: 1024px) {
+      @rules();
+   }
+}
+
+.mobile(@rules) {
+   @media screen and (max-width: 768px) {
+      @rules();
+   }
+}
+
+.mobile-mini(@rules) {
+   @media screen and (max-width: 450px) {
+      @rules();
+   }
+}
