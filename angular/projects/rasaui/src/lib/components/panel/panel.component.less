@@ -1,0 +1,37 @@
+@import '../../styles/functions.less';
+
+rasa-panel {
+   display: block;
+   background: var(--color-white);
+   box-shadow: var(--shadow-2);
+
+   &.spaced {
+      padding: 4.5rem;
+   }
+
+   &.normal {
+      padding: 3rem;
+   }
+
+   &.slim {
+      padding: 2rem;
+   }
+
+   &.straight {
+      border-radius: 0.2rem;
+   }
+
+   &.semicurved {
+      border-radius: 0.5rem;
+   }
+
+   &.curved {
+      border-radius: 1.2rem;
+   }
+
+   .mobile({
+      &:not(.spaceless):not(.slim) {
+         padding: 3rem;
+      }
+   });
+}

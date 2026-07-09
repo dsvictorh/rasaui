@@ -1,11 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
-import { ResetComponent, ThemeComponent } from 'rasaui';
+import { PanelComponent, ResetComponent, ThemeComponent } from 'rasaui';
 
 @Component({
    selector: 'sandbox-root',
-   imports: [RouterOutlet, ResetComponent, ThemeComponent],
+   imports: [ResetComponent, ThemeComponent, PanelComponent],
    templateUrl: './app.html',
    styles: []
 })

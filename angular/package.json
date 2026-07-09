@@ -11,8 +11,8 @@
       "format": "prettier --write .",
       "format:check": "prettier --check .",
       "rasa:component": "cd projects/rasaui/src/lib/components && ng generate component --type component --style less -v None",
-      "rasa:pipe": "cd projects/rasaui/src/lib/pipes && ng generate pipe --flat false",
-      "rasa:directive": "cd projects/rasaui/src/lib/directives && ng generate directive --type directive --flat false"
+      "rasa:directive": "cd projects/rasaui/src/lib/directives && ng generate directive --type directive --flat false",
+      "rasa:pipe": "cd projects/rasaui/src/lib/pipes && ng generate pipe --flat false"
    },
    "private": true,
    "packageManager": "npm@11.17.0",
