@@ -3,6 +3,7 @@
 RasaUI Angular library and sandbox.
 
 ## Development Setup
+
 1. Make sure to follow the [prerequisites](../../../README.md#development-prerequisites) on the monorepo.
 2. Run `npm install` to restore project packages.
 3. Run `npm start` to build and watch the library as well as opening the sandbox project.

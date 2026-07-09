@@ -8,4 +8,6 @@ import { PanelComponent, ResetComponent, ThemeComponent } from 'rasaui';
    templateUrl: './app.html',
    styles: []
 })
-export class App {}
+export class App {
+   public readonly panelType = signal<'normal' | 'spaced' | 'slim' | 'spaceless'>('slim');
+}
