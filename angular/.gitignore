@@ -42,3 +42,7 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Sandbox files
+/projects/sandbox/src/app/app.html
+/projects/sandbox/src/app/app.ts
