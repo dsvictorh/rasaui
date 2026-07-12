@@ -8,7 +8,7 @@ RasaUI Angular library and sandbox.
 2. Run `npm install` to restore project packages.
 3. Copy both `.sample` suffixed app files in the sandbox `src/app/` folder and remove the suffix from the copies.
 4. Run `npm start` to build and watch the library as well as opening the sandbox project.
-5. Before sending any commit make sure to run `npm run precommit` and fix all linting errors.
+5. Before sending any commit make sure to run `npm run lib:precommit` and fix all linting errors.
 
 **IMPORTANT**: Do not create any angular elements without using the `package.json` commands. If a command is not present for something discuss with your lead and use one time or create the appropriate reusable command.
 
@@ -16,11 +16,11 @@ RasaUI Angular library and sandbox.
 # SAMPLES
 
 #Create a component
-npm run rasa:component
+npm run lib:gen:component
 
 #Create a directive
-npm run rasa:directive
+npm run lib:gen:directive
 
 #Create a pipe
-npm run rasa:pipe
+npm run lib:gen:pipe
 ```

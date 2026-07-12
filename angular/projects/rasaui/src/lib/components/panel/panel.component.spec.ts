@@ -16,7 +16,15 @@ describe('PanelComponent', () => {
       await fixture.whenStable();
    });
 
-   it('should create', () => {
-      expect(component).toBeTruthy();
+   it('Should modify class attribute', () => {
+      expect(component.class()).toContain('normal');
+      expect(component.class()).toContain('straight');
+
+      fixture.componentRef.setInput('type', 'spaced');
+      fixture.componentRef.setInput('variation', 'semicurved');
+      fixture.detectChanges();
+
+      expect(component.class()).toContain('spaced');
+      expect(component.class()).toContain('semicurved');
    });
 });
