@@ -9,5 +9,6 @@ import { PanelComponent, ResetComponent, ThemeComponent } from 'rasaui';
    styles: []
 })
 export class App {
-   public readonly panelType = signal<'normal' | 'spaced' | 'slim' | 'spaceless'>('slim');
+   public readonly panelType = signal<'normal' | 'spaced' | 'slim' | 'spaceless'>('normal');
+   public readonly panelVariation = signal<'straight' | 'semicurved' | 'curved'>('straight');
 }

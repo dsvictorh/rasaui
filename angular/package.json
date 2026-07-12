@@ -3,7 +3,7 @@
    "scripts": {
       "ng": "ng",
       "start": "run-p lib sandbox",
-      "sandbox": "wait-on dist/rasaui/package.json && ng serve sandbox",
+      "sandbox": "wait-on dist/rasaui/package.json && ng serve sandbox --watch",
       "lib": "ng build rasaui --watch",
       "precommit": "npm run format && npm run lint",
       "lint": "eslint --fix",
