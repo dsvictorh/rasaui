@@ -2,8 +2,8 @@
 
 rasa-panel {
    display: block;
-   background: var(--color-white);
-   box-shadow: var(--shadow-2);
+   background: var(--rasa-color-white);
+   box-shadow: var(--rasa-shadow-2);
 
    &.spaced {
       padding: 2.5rem;
@@ -23,5 +23,10 @@ rasa-panel {
 
    &.curved {
       border-radius: 1.2rem;
+   }
+
+   .panel-scroll-x {
+      overflow-y: hidden;
+      overflow-x: auto;
    }
 }

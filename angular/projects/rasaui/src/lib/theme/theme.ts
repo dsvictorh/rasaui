@@ -1,9 +1,9 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-   selector: 'rasa-reset',
+   selector: 'rasa-theme',
    template: '',
-   styleUrl: './reset.component.less',
+   styleUrl: './theme.less',
    encapsulation: ViewEncapsulation.None
 })
-export class ResetComponent {}
+export class RasaTheme {}

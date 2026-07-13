@@ -1,8 +1,8 @@
-import { PanelScrollDirective } from './panel-scroll.directive';
+import { PanelScrollXDirective } from './panel-scroll-x.directive';
 
 describe('PanelScrollDirective', () => {
    it('should create an instance', () => {
-      const directive = new PanelScrollDirective();
+      const directive = new PanelScrollXDirective();
       expect(directive).toBeTruthy();
    });
 });

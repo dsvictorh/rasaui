@@ -1,0 +1,114 @@
+@import (css) url('https://fonts.googleapis.com');
+@import (css) url('https://fonts.gstatic.com') layer;
+
+@import (css)
+   url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,100..400,0..1,0&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..800;1,6..12,200..800&family=Prompt:wght@400;500;600;700&display=swap');
+
+@import 'reset.less';
+@import 'functions.less';
+@import 'animations.less';
+
+:root {
+   /* FONTS */
+   --rasa-font-prompt: 'Prompt', Arial, sans-serif;
+   --rasa-font-nunito: 'Nunito Sans', Helvetica, sans-serif;
+   --rasa-font-size-base: 1.4rem;
+
+   /* MAIN COLORS */
+   --rasa-color-primary: #161f4a;
+   --rasa-color-secondary: #003049;
+   --rasa-color-tertiary: #eef1ff;
+   --rasa-color-quaternary: #f9faff;
+   --rasa-color-black: #000;
+   --rasa-color-white: #fff;
+
+   /* GRAY COLORS */
+   --rasa-color-gray-1: #4d4d4d;
+   --rasa-color-gray-2: #717171;
+   --rasa-color-gray-3: #c4cad0;
+   --rasa-color-gray-4: #abbed1;
+   --rasa-color-gray-5: #f2f2f2;
+   --rasa-color-gray-6: #fafafa;
+
+   /* BLUE COLORS */
+   --rasa-color-blue-1: #007fff;
+
+   /* GREEN COLORS */
+   --rasa-color-green-1: #115b43;
+   --rasa-color-green-2: #1b6e53;
+   --rasa-color-green-3: #009262;
+   --rasa-color-green-4: #32c997;
+   --rasa-color-green-5: #84dfc1;
+   --rasa-color-green-6: #f1fbf8;
+
+   /* YELLOW COLORS */
+   --rasa-color-yellow-1: #e48900;
+   --rasa-color-yellow-2: #ffa826;
+   --rasa-color-yellow-3: #ffb240;
+   --rasa-color-yellow-4: #ffc670;
+   --rasa-color-yellow-5: #ffd596;
+   --rasa-color-yellow-6: #fff8ec;
+
+   /* RED COLORS */
+   --rasa-color-red-1: #c33025;
+   --rasa-color-red-2: #e01507;
+   --rasa-color-red-3: #e02b1d;
+   --rasa-color-red-4: #ff5a4f;
+   --rasa-color-red-5: #f0857d;
+   --rasa-color-red-6: #fff1f0;
+
+   /* SHADOWS */
+   --rasa-shadow-1: 0.1rem 0.1rem 0.2rem 0rem rgba(0, 0, 0, 0.6);
+   --rasa-shadow-2: 0.1rem 0.1rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
+   --rasa-shadow-3: 0.2rem 0.3rem 0.6rem 0rem rgba(0, 0, 0, 0.3);
+   --rasa-shadow-4: 0.2rem 0.3rem 0.8rem 0rem rgba(0, 0, 0, 0.4);
+   --rasa-shadow-focus-1: 0 0 0 0.2rem var(--rasa-color-gray-1);
+   --rasa-shadow-focus-2: 0 0 0 0.2rem var(--rasa-color-black);
+   --rasa-shadow-focus-3: 0 0 0 0.2rem var(--rasa-color-white);
+}
+
+* {
+   box-sizing: border-box;
+   transition:
+      box-shadow 0.05s 0.15s linear,
+      border-radius 0s 0.15s linear;
+   scrollbar-width: thin;
+   scrollbar-color: var(--rasa-color-gray-4) transparent;
+   scroll-behavior: smooth;
+}
+
+html {
+   font-size: 10px;
+   height: 100%;
+
+   .laptop-height({
+      font-size: 9px;
+   });
+}
+
+body {
+   font-family: var(--rasa-font-nunito);
+   font-weight: 400;
+   font-size: var(--rasa-font-size-base);
+   color: var(--rasa-color-black);
+   background: var(--rasa-color-gray-6);
+   line-height: 1;
+   height: 100%;
+}
+
+a {
+   color: var(--rasa-color-primary);
+
+   &.disabled {
+      color: var(--rasa-color-gray-4);
+   }
+}
+
+:focus {
+   outline: none;
+
+   &:not(:active) {
+      box-shadow: var(--rasa-shadow-focus-1);
+      border-radius: 0.2rem;
+   }
+}

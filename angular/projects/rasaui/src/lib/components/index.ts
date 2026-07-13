@@ -1,2 +1,2 @@
 export * from './panel/panel.component';
-export * from './panel/panel-scroll/panel-scroll.directive';
+export * from './panel/panel-scroll-x/panel-scroll-x.directive';

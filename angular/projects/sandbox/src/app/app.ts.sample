@@ -1,10 +1,10 @@
 import { Component, signal } from '@angular/core';
 
-import { PanelComponent, ResetComponent, ThemeComponent } from 'rasaui';
+import { PanelComponent, RasaTheme } from 'rasaui';
 
 @Component({
    selector: 'sandbox-root',
-   imports: [ResetComponent, ThemeComponent, PanelComponent],
+   imports: [RasaTheme, PanelComponent],
    templateUrl: './app.html',
    styles: []
 })

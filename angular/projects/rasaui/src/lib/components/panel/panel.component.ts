@@ -1,6 +1,6 @@
 import { Component, computed, contentChild, input, ViewEncapsulation } from '@angular/core';
 
-import { PanelScrollDirective } from './panel-scroll/panel-scroll.directive';
+import { PanelScrollXDirective } from './panel-scroll-x/panel-scroll-x.directive';
 import { scrollX } from '../../functions';
 
 @Component({
@@ -19,6 +19,6 @@ export class PanelComponent {
 
    public readonly class = computed(() => `${this.type()} ${this.variation()}`);
 
-   public readonly scrollableArea = contentChild(PanelScrollDirective);
+   public readonly panellScrollX = contentChild(PanelScrollXDirective);
    public readonly scrollX = scrollX;
 }

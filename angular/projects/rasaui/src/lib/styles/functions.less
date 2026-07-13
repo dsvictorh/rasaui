@@ -1,7 +1,7 @@
 /* IMPORTANT: ALWAYS USE THESE FUNCTIONS FOR THE FUNCTIONALITIES THEY OFFER INSTEAD OF DIRECT METHODS */
 
 /* Image function that allows to create adaptible images from svg files */
-.svg(@url, @width: null, @height: null, @ratio: 1, @color: var(--color-black), @adaptible: false) {
+.svg(@url, @width: null, @height: null, @ratio: 1, @color: var(--rasa-color-black), @adaptible: false) {
    text-align: center;
    & when (@adaptible = true) {
       max-width: if(not(@width=null), @width, none);

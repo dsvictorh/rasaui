@@ -1,3 +1,2 @@
 <rasa-theme />
-<rasa-reset />
 <rasa-panel class="custom-class" [type]="panelType()">Panel</rasa-panel>

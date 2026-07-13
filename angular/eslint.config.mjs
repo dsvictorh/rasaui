@@ -113,8 +113,7 @@ export default defineConfig(
             {
                groups: [
                   ['^@angular'], //Angular packages
-                  ['^@(?!angular)(?!rasa)', '^[a-z]'], //External npm packages (scoped or unscoped)
-                  ['^@rasa'], //Project-local aliases
+                  ['^@(?!angular)', '^[a-z]'], //External npm packages (scoped or unscoped)
                   ['^\\./', '^\\.\\./'], //Relative/physical paths
                   ['^\\u0000'] //"None" imports
                ]
