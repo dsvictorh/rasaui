@@ -1,4 +1,7 @@
-import { Component, computed, input, ViewEncapsulation } from '@angular/core';
+import { Component, computed, contentChild, input, ViewEncapsulation } from '@angular/core';
+
+import { PanelScrollDirective } from './panel-scroll/panel-scroll.directive';
+import { scrollX } from '../../functions';
 
 @Component({
    selector: 'rasa-panel',
@@ -15,4 +18,7 @@ export class PanelComponent {
    public readonly variation = input<'straight' | 'semicurved' | 'curved'>('straight');
 
    public readonly class = computed(() => `${this.type()} ${this.variation()}`);
+
+   public readonly scrollableArea = contentChild(PanelScrollDirective);
+   public readonly scrollX = scrollX;
 }

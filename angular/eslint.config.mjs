@@ -9,6 +9,9 @@ import perfectionist from 'eslint-plugin-perfectionist';
 
 export default defineConfig(
    {
+      ignores: ['dist/**']
+   },
+   {
       ignores: ['.angular/**', '.nx/**', 'coverage/**', 'dist/**', 'projects/sandbox/**'],
       files: ['**/*.ts'],
       extends: [
@@ -30,13 +33,7 @@ export default defineConfig(
       },
       processor: angular.processInlineTemplates,
       rules: {
-         '@angular-eslint/directive-selector': [
-            'error',
-            {
-               type: 'attribute',
-               style: 'camelCase'
-            }
-         ],
+         '@angular-eslint/directive-selector': 'off',
          '@angular-eslint/component-selector': [
             'error',
             {

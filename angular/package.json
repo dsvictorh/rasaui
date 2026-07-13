@@ -6,6 +6,7 @@
       "sandbox:start": "wait-on dist/rasaui/package.json && ng serve sandbox --watch",
       "lib:start": "ng build rasaui --watch",
       "lib:test": "ng test --watch false",
+      "lib:build": "ng build rasaui --configuration production",
       "lib:precommit": "npm run lib:format && npm run lib:lint",
       "lib:lint": "eslint --fix",
       "lib:lint:check": "eslint",
