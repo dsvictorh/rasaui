@@ -1,0 +1,22 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { GridCellComponent } from './grid-cell.component';
+
+describe('GridCellComponent', () => {
+   let component: GridCellComponent;
+   let fixture: ComponentFixture<GridCellComponent>;
+
+   beforeEach(async () => {
+      await TestBed.configureTestingModule({
+         imports: [GridCellComponent]
+      }).compileComponents();
+
+      fixture = TestBed.createComponent(GridCellComponent);
+      component = fixture.componentInstance;
+      await fixture.whenStable();
+   });
+
+   it('should create', () => {
+      expect(component).toBeTruthy();
+   });
+});

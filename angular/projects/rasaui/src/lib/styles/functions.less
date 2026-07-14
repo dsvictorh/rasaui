@@ -45,6 +45,18 @@
 }
 
 /* Responsive breakpoint functions */
+.desktop-4k(@rules) {
+   @media screen and (max-width: 3840px) {
+      @rules();
+   }
+}
+
+.desktop-2k(@rules) {
+   @media screen and (max-width: 2560px) {
+      @rules();
+   }
+}
+
 .laptop(@rules) {
    @media screen and (max-width: 1366px) {
       @rules();
@@ -75,7 +87,7 @@
    }
 }
 
-.mobile-mini(@rules) {
+.mobile-small(@rules) {
    @media screen and (max-width: 450px) {
       @rules();
    }

@@ -27,7 +27,7 @@ describe('PanelScrollDirective', () => {
       const fixture = TestBed.createComponent(TestPanelComponent);
       expect(fixture).toBeTruthy();
    });
-   
+
    it('Should throw error when not in panel component', async () => {
       await TestBed.configureTestingModule({
          imports: [TestNoPanelComponent]

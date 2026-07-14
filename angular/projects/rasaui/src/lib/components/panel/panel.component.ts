@@ -14,11 +14,14 @@ import { scrollX } from '../../functions';
    encapsulation: ViewEncapsulation.None
 })
 export class PanelComponent {
-   public readonly type = input<'normal' | 'spaced' | 'slim' | 'spaceless'>('normal');
-   public readonly variation = input<'straight' | 'semicurved' | 'curved'>('straight');
+   public readonly type = input<PanelType>('normal');
+   public readonly variation = input<PanelVariation>('straight');
 
    public readonly class = computed(() => `${this.type()} ${this.variation()}`);
 
    public readonly panellScrollX = contentChild(PanelScrollXDirective);
    public readonly scrollX = scrollX;
 }
+
+export type PanelType = 'normal' | 'spaced' | 'slim' | 'spaceless';
+export type PanelVariation = 'straight' | 'semicurved' | 'curved';

@@ -1,7 +1,6 @@
+<ng-content />
 @if (panellScrollX() != null) {
    <div class="panel-scroll-x" (wheel)="scrollX($event)">
       <ng-content select="rasa-panel-scroll-x" />
    </div>
 }
-
-<ng-content />
