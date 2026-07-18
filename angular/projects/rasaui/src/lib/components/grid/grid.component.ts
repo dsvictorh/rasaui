@@ -14,7 +14,7 @@ import { Component, computed, input, ViewEncapsulation } from '@angular/core';
 export class GridComponent {
    public readonly columns = input.required<GridColumns>();
    public readonly laptopColumns = input<GridColumns>();
-   public readonly laptopSmallcolumns = input<GridColumns>();
+   public readonly laptopSmallColumns = input<GridColumns>();
    public readonly tabletColumns = input<GridColumns>();
    public readonly mobileColumns = input<GridColumns>();
    public readonly mobileSmallColumns = input<GridColumns>();
@@ -26,19 +26,19 @@ export class GridComponent {
          `cols-${this.columns()} ${this.laptopColumnsClass()} ${this.laptopSmallColumnsClass()} ${this.tabletColumnsClass()} ${this.mobileColumnsClass()} ${this.mobileSmallColumnsClass()}`
    );
    public readonly laptopColumnsClass = computed(() =>
-      this.laptopColumns() != null ? `cols-laptop-${this.columns()}` : ''
+      this.laptopColumns() != null ? `cols-laptop-${this.laptopColumns()}` : ''
    );
    public readonly laptopSmallColumnsClass = computed(() =>
-      this.laptopSmallcolumns() != null ? `cols-laptop-sm-${this.columns()}` : ''
+      this.laptopSmallColumns() != null ? `cols-laptop-sm-${this.laptopSmallColumns()}` : ''
    );
    public readonly tabletColumnsClass = computed(() =>
-      this.tabletColumns() != null ? `cols-tablet-${this.columns()}` : ''
+      this.tabletColumns() != null ? `cols-tablet-${this.tabletColumns()}` : ''
    );
    public readonly mobileColumnsClass = computed(() =>
-      this.mobileColumns() != null ? `cols-mobile-${this.columns()}` : ''
+      this.mobileColumns() != null ? `cols-mobile-${this.mobileColumns()}` : ''
    );
    public readonly mobileSmallColumnsClass = computed(() =>
-      this.mobileSmallColumns() != null ? `cols-mobile-sm-${this.columns()}` : ''
+      this.mobileSmallColumns() != null ? `cols-mobile-sm-${this.mobileSmallColumns()}` : ''
    );
 
    public readonly style = computed(() => `${this.rowTemplateStyle()} ${this.autoRowTemplateStyle()}`);
