@@ -8,7 +8,7 @@ import { GridComponent } from '../grid.component';
 @Component({
    imports: [GridComponent, GridCellComponent],
    template:
-      '<rasa-grid [columns]="1"><rasa-grid-cell [colFrom]="colFrom()" [colTo]="colTo()" [rowFrom]="rowFrom()" [rowTo]="rowTo()" /></rasa-grid>',
+      '<rasa-grid [columns]="4"><rasa-grid-cell [colFrom]="colFrom()" [colTo]="colTo()" [rowFrom]="rowFrom()" [rowTo]="rowTo()" /></rasa-grid>',
    encapsulation: ViewEncapsulation.None
 })
 class TestGridComponent {
@@ -68,6 +68,25 @@ describe('GridCellComponent', () => {
 
       expect(element.style.gridColumn).toBe('2 / 2');
       expect(element.style.gridRow).toBe('2 / 2');
+   });
+
+   it('Should have grid column styles not greater than max columns from GridComponent', async () => {
+      await TestBed.configureTestingModule({
+         imports: [TestGridComponent]
+      }).compileComponents();
+
+      const fixture = TestBed.createComponent(TestGridComponent);
+      const gridCell = fixture.debugElement.query(By.directive(GridCellComponent));
+      const element = gridCell.nativeElement as HTMLElement;
+
+      expect(element.style.gridColumn).toBe('');
+      expect(element.style.gridRow).toBe('');
+
+      fixture.componentInstance.colFrom.set(7);
+      fixture.componentInstance.colTo.set(8);
+      fixture.detectChanges();
+
+      expect(element.style.gridColumn).toBe('4 / 5');
    });
 
    it('Should throw error when not in grid component', async () => {

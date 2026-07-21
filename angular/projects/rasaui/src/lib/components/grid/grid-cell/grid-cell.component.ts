@@ -22,10 +22,18 @@ export class GridCellComponent {
 
    public readonly style = computed(() => `${this.colSpan()} ${this.rowSpan()}`);
    public readonly colSpan = computed(
-      () => `grid-column: ${this.colFrom()} / ${this.colTo() >= this.colFrom() ? this.colTo() + 1 : this.colFrom()};`
+      () =>
+         `grid-column: ${this.fixedColFrom()} / ${this.fixedColTo() >= this.fixedColFrom() ? this.fixedColTo() + 1 : this.fixedColFrom()};`
    );
    public readonly rowSpan = computed(
       () => `grid-row: ${this.rowFrom()} / ${this.rowTo() >= this.rowFrom() ? this.rowTo() + 1 : this.rowFrom()};`
+   );
+
+   public readonly fixedColFrom = computed(() =>
+      this.colFrom() > this.grid!.columns() ? this.grid!.columns() : this.colFrom()
+   );
+   public readonly fixedColTo = computed(() =>
+      this.colTo() > this.grid!.columns() ? this.grid!.columns() : this.colTo()
    );
 
    public constructor() {
