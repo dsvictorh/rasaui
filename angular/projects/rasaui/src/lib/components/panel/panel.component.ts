@@ -5,7 +5,6 @@ import { scrollX } from '../../functions';
 
 @Component({
    selector: 'rasa-panel',
-   imports: [],
    templateUrl: './panel.component.html',
    styleUrl: './panel.component.less',
    host: {

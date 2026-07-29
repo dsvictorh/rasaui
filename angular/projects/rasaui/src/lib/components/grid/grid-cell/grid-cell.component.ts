@@ -4,9 +4,7 @@ import { GridComponent } from '../grid.component';
 
 @Component({
    selector: 'rasa-grid-cell',
-   imports: [],
    templateUrl: './grid-cell.component.html',
-   styleUrl: './grid-cell.component.less',
    host: {
       '[style]': 'style()'
    },

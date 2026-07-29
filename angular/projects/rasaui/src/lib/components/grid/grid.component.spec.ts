@@ -17,6 +17,7 @@ describe('GridComponent', () => {
 
    it('Should have column classes added', () => {
       const element = fixture.nativeElement as HTMLElement;
+
       expect(element.classList).toContain('cols-1');
 
       fixture.componentRef.setInput('laptopColumns', 2);
@@ -42,6 +43,7 @@ describe('GridComponent', () => {
 
    it('Should have row template', () => {
       const element = fixture.nativeElement as HTMLElement;
+
       expect(element.style.gridTemplateRows).toBe('');
 
       fixture.componentRef.setInput('rowTemplate', '1fr 1fr 1fr');
@@ -51,6 +53,7 @@ describe('GridComponent', () => {
 
    it('Should have auto row template', () => {
       const element = fixture.nativeElement as HTMLElement;
+
       expect(element.style.gridAutoRows).toBe('');
 
       fixture.componentRef.setInput('autoRowTemplate', '1fr 1fr 1fr');

@@ -1,17 +1,25 @@
-@import (css) url('https://fonts.googleapis.com');
-@import (css) url('https://fonts.gstatic.com') layer;
-
-@import (css)
-   url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,100..400,0..1,0&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..800;1,6..12,200..800&family=Prompt:wght@400;500;600;700&display=swap');
-
 @import 'reset.less';
 @import 'functions.less';
 @import 'animations.less';
 
+/*
+DEFAULT GOOGLE FONT IMPORTS FOR THEME TO WORK.
+Change whenever necessary to keep record for library documentation
+
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+<link
+   href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&family=Roboto:ital,wght@0,200;0,400;0,500;0,700;0,800;1,200;1,400&display=swap"
+   rel="stylesheet" />
+<link
+   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,200,0,-25;20..48,200,0,0;20..48,400,0,-25;20..48,400,0,0&display=block"
+   rel="stylesheet" />
+*/
+
 :root {
    /* FONTS */
-   --rasa-font-prompt: 'Prompt', Arial, sans-serif;
-   --rasa-font-nunito: 'Nunito Sans', Helvetica, sans-serif;
+   --rasa-font-headings: 'Prompt', Arial, sans-serif;
+   --rasa-font-body: 'Roboto', Helvetica, sans-serif;
    --rasa-font-size-base: 1.4rem;
    --rasa-gap: 1rem;
 
@@ -33,6 +41,11 @@
 
    /* BLUE COLORS */
    --rasa-color-blue-1: #007fff;
+   --rasa-color-blue-2: #2485e6;
+   --rasa-color-blue-3: #3796f5;
+   --rasa-color-blue-4: #5bc7fa;
+   --rasa-color-blue-5: #89d5f8;
+   --rasa-color-blue-6: #bde3f5;
 
    /* GREEN COLORS */
    --rasa-color-green-1: #115b43;
@@ -92,7 +105,7 @@ html {
 }
 
 body {
-   font-family: var(--rasa-font-nunito);
+   font-family: var(--rasa-font-body);
    font-weight: 400;
    font-size: var(--rasa-font-size-base);
    color: var(--rasa-color-black);

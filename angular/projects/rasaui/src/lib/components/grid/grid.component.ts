@@ -2,7 +2,6 @@ import { Component, computed, input, ViewEncapsulation } from '@angular/core';
 
 @Component({
    selector: 'rasa-grid',
-   imports: [],
    templateUrl: './grid.component.html',
    styleUrl: './grid.component.less',
    host: {
