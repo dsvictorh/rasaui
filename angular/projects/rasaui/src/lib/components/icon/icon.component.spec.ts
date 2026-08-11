@@ -22,19 +22,19 @@ describe('IconComponent', () => {
       expect(element.classList).toContain('material-symbols-rounded');
       expect(element.classList).toContain('material-symbols-sharp');
 
-      fixture.componentRef.setInput('iconStyle', 'outlined');
+      fixture.componentRef.setInput('variation', 'outlined');
       fixture.detectChanges();
       expect(element.classList).toContain('material-symbols-outlined');
       expect(element.classList).not.toContain('material-symbols-rounded');
       expect(element.classList).not.toContain('material-symbols-sharp');
 
-      fixture.componentRef.setInput('iconStyle', 'rounded');
+      fixture.componentRef.setInput('variation', 'rounded');
       fixture.detectChanges();
       expect(element.classList).toContain('material-symbols-rounded');
       expect(element.classList).not.toContain('material-symbols-outlined');
       expect(element.classList).not.toContain('material-symbols-sharp');
 
-      fixture.componentRef.setInput('iconStyle', 'sharp');
+      fixture.componentRef.setInput('variation', 'sharp');
       fixture.detectChanges();
       expect(element.classList).toContain('material-symbols-sharp');
       expect(element.classList).not.toContain('material-symbols-rounded');
@@ -46,11 +46,11 @@ describe('IconComponent', () => {
 
       expect(element.classList).not.toContain('fill');
 
-      fixture.componentRef.setInput('iconFill', true);
+      fixture.componentRef.setInput('fill', true);
       fixture.detectChanges();
       expect(element.classList).toContain('fill');
 
-      fixture.componentRef.setInput('iconFill', false);
+      fixture.componentRef.setInput('fill', false);
       fixture.detectChanges();
       expect(element.classList).not.toContain('fill');
    });

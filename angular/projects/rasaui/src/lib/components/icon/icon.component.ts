@@ -11,14 +11,14 @@ import { Component, computed, input, ViewEncapsulation } from '@angular/core';
 })
 export class IconComponent {
    public readonly icon = input.required<string>();
-   public readonly iconFill = input<IconFill>('auto');
-   public readonly iconStyle = input<IconStyle>('auto');
+   public readonly fill = input<IconFill>('auto');
+   public readonly variation = input<IconStyle>('auto');
 
    public readonly class = computed(() => `icon ${this.styleClass()} ${this.fillClass()}`);
-   public readonly fillClass = computed(() => (this.iconFill() === true ? 'fill' : ''));
+   public readonly fillClass = computed(() => (this.fill() === true ? 'fill' : ''));
    public readonly styleClass = computed(() =>
-      this.iconStyle() != 'auto'
-         ? `material-symbols-${this.iconStyle()}`
+      this.variation() != 'auto'
+         ? `material-symbols-${this.variation()}`
          : 'material-symbols-outlined material-symbols-rounded material-symbols-sharp'
    );
 }
