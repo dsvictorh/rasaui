@@ -1,8 +1,6 @@
 @import 'functions.less';
 
-meracq-panel {
-   cursor: initial;
-
+rasa-modal {
    .modal {
       position: fixed;
       top: 0;
@@ -25,6 +23,10 @@ meracq-panel {
          align-items: flex-start;
          padding-top: 10vh;
       });
+
+      &.closing {
+         animation: fade-out 0.3s ease-out forwards;
+      }
    }
 
    .top {

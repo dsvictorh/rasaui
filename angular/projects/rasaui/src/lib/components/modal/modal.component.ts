@@ -35,7 +35,7 @@ export class ModalComponent implements AfterViewInit {
    public readonly active = signal<boolean>(false);
    public readonly classes = computed(() => `${this.size()} ${this.position()}`);
 
-   private readonly modalRef = viewChild('modal', { read: ElementRef });
+   private readonly closeRef = viewChild('close', { read: ElementRef });
 
    private initialized: boolean;
 
@@ -47,7 +47,8 @@ export class ModalComponent implements AfterViewInit {
             this.emitClose();
          } else if (this.open()) {
             this.active.set(true);
-            setTimeout(() => this.modalRef()?.nativeElement.blur(), 10);
+            //Blur the modal close button so the accessibility focus doesn't when first opening
+            setTimeout(() => this.closeRef()?.nativeElement.blur(), 10);
          }
       });
    }

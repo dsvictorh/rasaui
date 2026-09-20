@@ -1,10 +1,9 @@
 @if (active()) {
    <!-- 
       eslint-disable-next-line @angular-eslint/template/click-events-have-key-events
-      -- click event meant only to be able to close by clicking outside, other meassures enabled for closing wiht accessibilty 
+      -- click event meant only to be able to close by clicking outside, other meassures enabled for closing with accessibilty 
    -->
    <div
-      #modal
       class="modal"
       role="dialog"
       [attr.class]="classes()"
@@ -14,6 +13,8 @@
       (click)="onClickOutside()">
       @if (closeOnClickOutside()) {
          <rasa-icon
+            #close
+            class="modal-close"
             icon="close"
             [accessibleClick]="true"
             (accessibleClick)="onClickOutside()" />
