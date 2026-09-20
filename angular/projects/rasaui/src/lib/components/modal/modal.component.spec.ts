@@ -64,6 +64,7 @@ describe('ModalComponent', () => {
    it('Should emit close when open changes from true to false', () => {
       vi.useFakeTimers();
 
+      //eslint-disable-next-line @typescript-eslint/no-explicit-any -- cast component to any to access private function on spyOn
       const emitClose = vi.spyOn(component as any, 'emitClose');
 
       fixture.componentRef.setInput('open', true);
@@ -77,6 +78,7 @@ describe('ModalComponent', () => {
    });
 
    it('Should not emit close when initially created with open false', () => {
+      //eslint-disable-next-line @typescript-eslint/no-explicit-any -- cast component to any to access private function on spyOn
       const emitClose = vi.spyOn(component as any, 'emitClose');
 
       fixture.detectChanges();
